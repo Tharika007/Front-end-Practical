@@ -122,6 +122,10 @@
         margin-right: 0;
         padding: 10px 0;
     }
+
+    .upperhead {
+        display: none;
+    }
 }
 
 /*********** carousel *********/
@@ -353,7 +357,6 @@
     padding-left: 8px;
     padding-right: 8px;
     padding-top: auto;
-    margin-top: 10%;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -375,39 +378,40 @@
     text-align: center;
     justify-content: center;
     margin: auto;
-
 }
 
 
 /*******Destinations******/
 
-.destination-coloumn {
+.destination-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .des-image {
     width: 600px;
     height: 550px;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .map {
     z-index: 1;
     position: relative;
     width: 300px;
-    top: 10%;
+    top: 12%;
     height: 300px;
-    left: 70px;
+    left: 180px;
 }
 
 .dest-des {
     padding: 20px;
     z-index: 1;
     position: relative;
-    width: 500px;
-    top: 10%;
-    right: 80px;
+    width: 300px;
+    height: 450px;
+    top: 60px;
+    right: 100px;
     background-color: #FFF;
     box-shadow: 1px 1px;
     border: none;
@@ -421,12 +425,6 @@
 
 }
 
-.des-search {
-    width: 500px;
-    padding: 12px;
-    margin-left: 300px;
-}
-
 .primary-blue-button {
     font-family: serif;
     background-color: #050561;
@@ -438,12 +436,43 @@
     border: none;
 }
 
+.destination-topic {
+    width: 100%;
+    text-align: center;
+    display:grid;
+    justify-content: center;
+
+}
+
+.Search-bar-desti {
+    min-width: 520px;
+    padding: auto;
+}
+
 @media (max-width: 768px) {
     .des-image {
-        min-width: 400px;
-        min-height: 350px;
+        align-items: center;
+        max-width: 400px;
+        max-height: 350px;
+        background-size: cover;
     }
-    
+
+    .destination-topic {
+        font-size: 40px;
+        display: grid;
+        justify-content: center;
+        min-width: 200px;
+    }
+
+    .map {
+        z-index: 1;
+        position: relative;
+        width: 40px;
+        top: 12%;
+        height: 40px;
+        left: 200px;
+    }
+
     .dest-des {
         display: none;
     }
